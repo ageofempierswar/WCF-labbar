@@ -20,7 +20,10 @@ namespace Labb_1
         [WebMethod]
         public string Weather()
         {
-            return "Hello World";
+            string[] weather = { "Snow", "Sun", "Rain" };
+            var rnd = new Random();
+            int nr = rnd.Next(0, 3);
+            return weather[nr];
         }
     }
 }
