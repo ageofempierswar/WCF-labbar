@@ -75,9 +75,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddingThreeNumbers.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddingThreeNumbers.asmx.cs">
+      <DependentUpon>AddingThreeNumbers.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
