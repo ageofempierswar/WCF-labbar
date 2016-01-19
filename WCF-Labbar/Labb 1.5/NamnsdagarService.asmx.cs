@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
@@ -20,7 +21,7 @@ namespace Labb_1._5
         [WebMethod]
         public string GetNameForDate(string input)
         {
-            var array = File.ReadAllLines(@"C:\Users\Robin\Downloads\Namnsdagar.txt");
+            var array = File.ReadAllLines(@"Namnsdagar.txt");
 
             for (int i = 0; i < array.Length; i++)
             {
