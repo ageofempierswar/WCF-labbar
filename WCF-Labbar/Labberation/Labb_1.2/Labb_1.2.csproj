@@ -48,6 +48,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -75,10 +77,45 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdditionService.asmx" />
+    <Content Include="Index.aspx" />
+    <None Include="Service References\AdditionServiceTwoNumbers\AdditionService.disco" />
+    <None Include="Service References\AdditionServiceTwoNumbers\configuration91.svcinfo" />
+    <None Include="Service References\AdditionServiceTwoNumbers\configuration.svcinfo" />
+    <Content Include="Service References\AdditionServiceTwoNumbers\Labb_1._2.AdditionServiceTwoNumbers.AddTwoNumbersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AdditionServiceTwoNumbers\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
+    <None Include="Service References\AdditionServiceTwoNumbers\AdditionService.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdditionService.asmx.cs">
+      <DependentUpon>AdditionService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AdditionServiceTwoNumbers\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AdditionServiceTwoNumbers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
