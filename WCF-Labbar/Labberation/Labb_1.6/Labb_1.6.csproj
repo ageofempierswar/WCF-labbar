@@ -48,6 +48,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -67,7 +68,25 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FamousPassedAway2010.aspx" />
+    <Content Include="FamousPeopleDiedInPlanecrash.asmx" />
+    <Content Include="FamousPeopleWebForm.aspx" />
     <Content Include="packages.config" />
+    <None Include="Service References\FamousPeopleService\FamousPeopleDiedInPlanecrash.disco" />
+    <None Include="Service References\FamousPeopleService\configuration91.svcinfo" />
+    <None Include="Service References\FamousPeopleService\configuration.svcinfo" />
+    <Content Include="Service References\FamousPeopleService\Labb_1._6.FamousPeopleService.GetPersonFromListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\FamousPeopleService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\PeoplePassedAway2010Service\Labb_1._6.PeoplePassedAway2010Service.PersonWhoPassedAwayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\FamousPeopleService\FamousPeopleDiedInPlanecrash.wsdl" />
+    <None Include="Service References\PeoplePassedAway2010Service\PeopleWhoPassedAway2010.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -76,10 +95,59 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PeopleWhoPassedAway2010.asmx" />
+    <Content Include="Resorses\FamousPeopleDiedInPlaneCrash.txt" />
+    <Content Include="Resorses\PeopleThatPassedAway2010.txt" />
+    <None Include="Service References\PeoplePassedAway2010Service\PeopleWhoPassedAway2010.disco" />
+    <None Include="Service References\PeoplePassedAway2010Service\configuration91.svcinfo" />
+    <None Include="Service References\PeoplePassedAway2010Service\configuration.svcinfo" />
+    <None Include="Service References\PeoplePassedAway2010Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FamousPassedAway2010.aspx.cs">
+      <DependentUpon>FamousPassedAway2010.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FamousPassedAway2010.aspx.designer.cs">
+      <DependentUpon>FamousPassedAway2010.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FamousPeopleDiedInPlanecrash.asmx.cs">
+      <DependentUpon>FamousPeopleDiedInPlanecrash.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FamousPeopleWebForm.aspx.cs">
+      <DependentUpon>FamousPeopleWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FamousPeopleWebForm.aspx.designer.cs">
+      <DependentUpon>FamousPeopleWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PeopleWhoPassedAway2010.asmx.cs">
+      <DependentUpon>PeopleWhoPassedAway2010.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\FamousPeopleService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PeoplePassedAway2010Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FamousPeopleService\" />
+    <WCFMetadataStorage Include="Service References\PeoplePassedAway2010Service\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
