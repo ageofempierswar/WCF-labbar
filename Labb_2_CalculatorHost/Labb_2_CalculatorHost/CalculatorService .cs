@@ -7,7 +7,7 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 namespace Labb_2_CalculatorHost
 {
-    [ServiceContract]
+    
     class CalculatorService:ICalculator
     {
         public double Add(double a, double b)
